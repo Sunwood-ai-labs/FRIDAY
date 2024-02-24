@@ -17,7 +17,9 @@
 
 </div>
 
-## 概要
+
+
+## 📖 概要
 
 - **OS-Copilot**は、LinuxとMacOS上で汎用コンピュータエージェントを構築するための先駆的な概念フレームワークであり、異種OSエコシステム内でのアプリケーション間の統一インターフェースを提供します。
 
@@ -63,6 +65,7 @@ pip install -r requirements.txt
 5. **タスクを実行する:** 次のコマンドを実行してFRIDAYを起動します。必要に応じて`[query]`をあなたのタスクに置き換えてください。デフォルトのタスクは「'agent'という単語を含むテキストファイルを'document'というフォルダから'working_dir/agent'というパスに移動する」です。タスクが関連ファイルの使用を必要とする場合、`--query_file_path [file_path]`を使用できます。
 
 ```
+
 python run.py --query [query]
 
 ```
@@ -70,7 +73,7 @@ python run.py --query [query]
 
 * FRIDAYは現在、単一ラウンドの会話のみをサポートしています。
 
-## FRIDAY-Gizmos
+## 🛠️ FRIDAY-Gizmos
 FRIDAY内で直接使用できるツールを含む、FRIDAYのためのオープンソースライブラリを維持しています。
 ツールの詳細なリストについては、[FRIDAY-Gizmos](https://github.com/OS-Copilot/FRIDAY-Gizmos)をご覧ください。使用方法は以下の通りです:
 
@@ -88,10 +91,10 @@ python friday/core/action_manager.py --delete --tool_name [tool_name]
 ```
 
 
-## ユーザーインターフェース (UI)
+## 💻 ユーザーインターフェース (UI)
 
 **直感的なフロントエンドで体験を向上させましょう！**  このインターフェースは、あなたのエージェントを容易に制御するために作られています。詳細については、[FRIDAY Frontend](https://github.com/OS-Copilot/FRIDAY-front) をご覧ください。
-## FastAPIを使用して自分のAPIツールをデプロイする
+## ✨ FastAPIを使用して自分のAPIツールをデプロイする
 
 すべてのFastAPIはこちらにあります： [friday/api](https://chat.openai.com/c/friday/api)  
 1. **FastAPIファイルを準備する:**  [friday/api](https://chat.openai.com/c/friday/api) の下に新しいapiフォルダを作成し、そのフォルダの下にFastAPIのPythonファイルを配置します。 
@@ -287,14 +290,14 @@ class ToolRequestUtil:
 ```
 
 
-## 免責事項
+## 🛡 免責事項
 
 OS-Copilotは「現状のまま」提供され、いかなる種類の保証も伴いません。ユーザーは使用に伴うあらゆるリスク、**潜在的なデータ損失** や**システム設定の変更** を含む、全責任を負います。OS-Copilotの開発者は、その使用から生じるいかなる損害や損失に対しても責任を負いません。ユーザーは、行動が適用される法律および規制に準拠していることを確認する必要があります。
 ## 🏫 コミュニティ
 
 エージェント愛好家とつながり、ツールやデモを共有し、エキサイティングなイニシアチブに協力するために、私たちのコミュニティに参加してください。[Slack](https://join.slack.com/t/slack-ped8294/shared_invite/zt-2cqebow90-soac9UFKGZ2RcUy8PqjZrA) で私たちを見つけることができます。
 
-## 引用
+## 🔎 引用
 
 ```css
 @misc{wu2024oscopilot,
