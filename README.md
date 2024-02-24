@@ -1,17 +1,15 @@
-# OS-Copilot: Towards Generalist Computer Agents with Self-Improvement
+# OS-Copilot：自己改善を伴う汎用コンピュータエージェントに向けて
 
 <div align="center">
 
-[[Website]](https://os-copilot.github.io/)
+[[ウェブサイト]](https://os-copilot.github.io/)
 [[Arxiv]](https://arxiv.org/abs/2402.07456)
 [[PDF]](https://arxiv.org/pdf/2402.07456.pdf)
-<!-- [[Tweet]](https://twitter.com/DrJimFan/status/1662115266933972993?s=20) -->
+<!-- [[ツイート]](https://twitter.com/DrJimFan/status/1662115266933972993?s=20) -->
 
-[![Static Badge](https://img.shields.io/badge/MIT-License-green)](https://github.com/OS-Copilot/FRIDAY/blob/main/LICENSE)
-![Static Badge](https://img.shields.io/badge/python-3.10-blue)
-[![Static Badge](https://img.shields.io/badge/FRIDAY-Frontend-yellow)](https://github.com/OS-Copilot/FRIDAY-front)
-
-
+[![スタティックバッジ](https://img.shields.io/badge/MIT-License-green)](https://github.com/OS-Copilot/FRIDAY/blob/main/LICENSE)
+![スタティックバッジ](https://img.shields.io/badge/python-3.10-blue)
+[![スタティックバッジ](https://img.shields.io/badge/FRIDAY-Frontend-yellow)](https://github.com/OS-Copilot/FRIDAY-front)
 
 <p align="center">
   <img src='pic/demo.png' width="100%">
@@ -19,75 +17,86 @@
 
 </div>
 
-## 📖 Overview
+## 概要
 
-- **OS-Copilot** is a pioneering conceptual framework for building generalist computer agents on Linux and MacOS, which provides a unified interface for app interactions in the heterogeneous OS ecosystem.
-  
+- **OS-Copilot**は、LinuxとMacOS上で汎用コンピュータエージェントを構築するための先駆的な概念フレームワークであり、異種OSエコシステム内でのアプリケーション間の統一インターフェースを提供します。
+
 <p align="center">
   <img src='pic/framework.png' width="75%">
 </p>
 
-- Leveraging OS-Copilot, we built **FRIDAY**, a self-improving AI assistant capable of solving general computer tasks.
+- OS-Copilotを活用して、一般的なコンピュータタスクを解決する能力を持つ自己改善型AIアシスタント**FRIDAY**を構築しました。
 
 <p align="center">
   <img src='pic/FRIDAY.png' width="75%">
 </p>
 
-## ⚡️ Quickstart
+## ⚡️ クイックスタート
 
-1. **Clone the GitHub Repository:** 
+1. **GitHubリポジトリをクローンする:**
 
-   ```
-   git clone https://github.com/OS-Copilot/FRIDAY.git
-   ```
+```
 
-2. **Set Up Python Environment:** Ensure you have a version 3.10 or higher Python environment. You can create and
-   activate this environment using the following commands, replacing `FRIDAY_env` with your preferred environment
-   name:
+git clone [https://github.com/OS-Copilot/FRIDAY.git](https://github.com/OS-Copilot/FRIDAY.git) 
 
-   ```
-   conda create -n FRIDAY_env python=3.10 -y
-   conda activate FRIDAY_env
-   ```
+```
 
-3. **Install Dependencies:** Move into the `FRIDAY` directory and install the necessary dependencies by running:
 
-   ```
-   cd FRIDAY
-   pip install -r requirements.txt
-   ```
+2. **Python環境を設定する:** バージョン3.10以上のPython環境があることを確認してください。以下のコマンドを使用して、この環境を作成・アクティベートできます（`FRIDAY_env`を好みの環境名に置き換えてください）:
 
-4. **Set OpenAI API Key:** Configure your OpenAI API key in [.env](.env) and select the model you wish to use.
+```
+conda create -n FRIDAY_env python=3.10 -y
+conda activate FRIDAY_env
 
-5. **Execute Your Task:** Run the following command to start FRIDAY. Replace `[query]` with your task as needed. By default, the task is *"Move the text files containing the word 'agent' from the folder named 'document' to the path 'working_dir/agent'"*.  If the task requires using related files, you can use `--query_file_path [file_path]`.
-   ```
-   python run.py --query [query]
-   ```
+```
 
-\* FRIDAY currently only supports single-round conversation.
+3. **依存関係をインストールする:** `FRIDAY`ディレクトリに移動し、必要な依存関係をインストールするために次のコマンドを実行します:
 
-## 🛠️ FRIDAY-Gizmos
-We maintain an open-source library of toolkits for FRIDAY, which includes tools that can be directly utilized within FRIDAY.
-For a detailed list of tools, please see [FRIDAY-Gizmos](https://github.com/OS-Copilot/FRIDAY-Gizmos). The usage methods are as follows:
+```
+cd FRIDAY
+pip install -r requirements.txt
 
-1. Find the tool you want to use in [FRIDAY-Gizmos](https://github.com/OS-Copilot/FRIDAY-Gizmos) and download its tool code.
-2. Add the tool to FRIDAY's toolkit:
+```
+
+4. **OpenAI APIキーを設定する:** [.env](.env)にあなたのOpenAI APIキーを設定し、使用したいモデルを選択してください。
+
+5. **タスクを実行する:** 次のコマンドを実行してFRIDAYを起動します。必要に応じて`[query]`をあなたのタスクに置き換えてください。デフォルトのタスクは「'agent'という単語を含むテキストファイルを'document'というフォルダから'working_dir/agent'というパスに移動する」です。タスクが関連ファイルの使用を必要とする場合、`--query_file_path [file_path]`を使用できます。
+
+```
+python run.py --query [query]
+
+```
+
+
+* FRIDAYは現在、単一ラウンドの会話のみをサポートしています。
+
+## FRIDAY-Gizmos
+FRIDAY内で直接使用できるツールを含む、FRIDAYのためのオープンソースライブラリを維持しています。
+ツールの詳細なリストについては、[FRIDAY-Gizmos](https://github.com/OS-Copilot/FRIDAY-Gizmos)をご覧ください。使用方法は以下の通りです:
+
+1. [FRIDAY-Gizmos](https://github.com/OS-Copilot/FRIDAY-Gizmos)で使用したいツールを見つけ、そのツールコードをダウンロードします。
+2. ツールをFRIDAYのツールキットに追加します:
 ```shell
 python friday/core/action_manager.py --add --tool_name [tool_name] --tool_path [tool_path]
 ```
-3. If you wish to remove a tool, you can run:
+
+
+1. ツールを削除したい場合は、次のコマンドを実行できます:
+
 ```shell
 python friday/core/action_manager.py --delete --tool_name [tool_name]
 ```
 
-## 💻 User Interface (UI)
 
-**Enhance Your Experience with Our Intuitive Frontend!** This interface is crafted for effortless control of your agents. For more details, visit [FRIDAY Frontend](https://github.com/OS-Copilot/FRIDAY-front).
+## ユーザーインターフェース (UI)
 
-## ✨ Deploy your own API tools with FastAPI
-All FastAPIs are under： [friday/api](friday/api)
-1. **Prepare your FastAPI file:** Create a new api folder under [friday/api](friday/api) and put your FastAPi python files under that folder.
-2. **Import your FastAPI in API server:** Import your apis in [friday/core/api_server.py](friday/core/api_server.py)：
+**直感的なフロントエンドで体験を向上させましょう！**  このインターフェースは、あなたのエージェントを容易に制御するために作られています。詳細については、[FRIDAY Frontend](https://github.com/OS-Copilot/FRIDAY-front) をご覧ください。
+## FastAPIを使用して自分のAPIツールをデプロイする
+
+すべてのFastAPIはこちらにあります： [friday/api](https://chat.openai.com/c/friday/api)  
+1. **FastAPIファイルを準備する:**  [friday/api](https://chat.openai.com/c/friday/api) の下に新しいapiフォルダを作成し、そのフォルダの下にFastAPIのPythonファイルを配置します。 
+2. **APIサーバーにFastAPIをインポートする:**  [friday/core/api_server.py]() であなたのapiをインポートします：
+
 ```python
 import os
 
@@ -97,42 +106,42 @@ from friday.core.server_config import ConfigManager
 app = FastAPI()
 
 
-from friday.api.bing.bing_service import router as bing_router
-#[TODO] Import your own api here
+from friday.api.bing.bing_service as bing_router
+#[TODO] ここに自分のapiをインポートしてください
 
 
-from starlette.middleware.base import BaseHTTPMiddleware
-from starlette.requests import Request
+from starlette.middleware.base as BaseHTTPMiddleware
+from starlette.requests as Request
 
 
 class LoggingMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
-        print(f"Incoming request: {request.method} {request.url}")
+        print(f"着信リクエスト: {request.method} {request.url}")
         try:
             response = await call_next(request)
         except Exception as e:
-            print(f"Request error: {str(e)}")
+            print(f"リクエストエラー: {str(e)}")
             raise e from None
         else:
-            print(f"Outgoing response: {response.status_code}")
+            print(f"発信レスポンス: {response.status_code}")
         return response
 
 
 app.add_middleware(LoggingMiddleware)
 
-# Create a dictionary that maps service names to their routers
+# サービス名とそのルーターをマッピングする辞書を作成します
 services = {
     "bing": bing_router,
-    # [TODO] Add your api router here
+    # [TODO] ここにapiルーターを追加してください
 
 }
 
 server_list = [
     "bing",
-    # [TODO] Add your api's service name here.
+    # [TODO] ここにapiのサービス名を追加してください。
 ]
 
-# Include only the routers for the services listed in server_list
+# server_listに記載されているサービスのルーターのみを含めます
 for service in server_list:
     if service in services:
         app.include_router(services[service])
@@ -142,21 +151,27 @@ for service in server_list:
 
 if __name__ == "__main__":
     import uvicorn
-    # you can change your port anyway
+    # ポートを変更することができます
     uvicorn.run(app, host="0.0.0.0", port=8079)
 ```
-3. **Run API server:**
-Run the server in localhost,or deploy it on your web server:
-```
+
+ 
+1. **APIサーバーを実行する:** 
+サーバーをlocalhostで実行するか、またはあなたのウェブサーバーにデプロイします:
+
+```Copy code
 python api_server.py
 ```
-4. **Update API documentation:** 
 
-Update the API documentation located in [friday/core/openapi.json](friday/core/openapi.json). After launching the API server, you can access the current OpenAPI documentation at `http://localhost:8079/openapi.json`.
+ 
+1. **APIドキュメントを更新する:**
 
-Ensure to thoroughly update each API's summary in the documentation to clearly explain its functionality and usage. This is crucial as FRIDAY relies on these descriptions to understand the purpose of each API.
+[friday/core/openapi.json](https://chat.openai.com/c/friday/core/openapi.json) にあるAPIドキュメントを更新してください。APIサーバーを起動した後、`http://localhost:8079/openapi.json`で現在のOpenAPIドキュメントにアクセスできます。
 
-For example:
+各APIの概要を徹底的に更新し、その機能と使用方法を明確に説明してください。これは、FRIDAYが各APIの目的を理解するために重要です。
+
+例えば:
+
 ```json
 {
   "openapi": "3.1.0",
@@ -167,8 +182,8 @@ For example:
   "paths": {  
     "/tools/audio2text": {
       "post": {
-        // [TODO] change the summary to describe the usage of your api.
-        "summary": "A tool that converts audio to natural language text",
+        // [TODO] あなたのapiの使用法を説明するために概要を変更してください。
+        "summary": "音声を自然言語テキストに変換するツール",
         "operationId": "audio2text_tools_audio2text_post",
         "requestBody": {
           "content": {
@@ -182,7 +197,7 @@ For example:
         },
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "成功したレスポンス",
             "content": {
               "application/json": {
                 "schema": {}
@@ -190,7 +205,7 @@ For example:
             }
           },
           "422": {
-            "description": "Validation Error",
+            "description": "検証エラー",
             "content": {
               "application/json": {
                 "schema": {
@@ -211,7 +226,7 @@ For example:
           "file": {
             "type": "string",
             "format": "binary",
-            "title": "File"
+            "title": "ファイル"
           }
         },
         "type": "object",
@@ -227,24 +242,26 @@ For example:
 }
 ```
 
-5. **Change the base url of tool_request_util.py:** FRIDAY utilizes the script located at [friday/core/tool_request_util.py](friday/core/tool_request_util.py) to interface with your API tools. After deploying your APIs, make sure to update the base URL in this file to match your API server's URL.
+ 
+1. **tool_request_util.pyのベースURLを変更する:**  FRIDAYは、[friday/core/tool_request_util.py](https://chat.openai.com/c/friday/core/tool_request_util.py) にあるスクリプトを使用してAPIツールとインターフェースします。APIをデプロイした後、このファイルのベースURLをあなたのAPIサーバーのURLに一致するように更新してください。
+
 ```python
 import requests
 class ToolRequestUtil:
     def __init__(self):
         self.session = requests.session()
         self.headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
-        # [TODO] Change the base url
+        # [TODO] ベースURLを変更してください
         self.base_url = "http://localhost:8079"
 
     def request(self, api_path, method, params=None, files=None, content_type="application/json"):
         """
-        :param api_path: the path of the api
+        :param api_path: apiのパス
         :param method: get/post
-        :param params: the params of the api, can be None
-        :param files: files to be uploaded, can be None
-        :param content_type: the content_type of api, e.g., application/json, multipart/form-data, can be None
-        :return: the return of the api
+        :param params: apiのパラメータ、Noneも可
+        :param files: アップロードするファイル、Noneも可
+        :param content_type: apiのcontent_type、例：application/json, multipart/form-data、Noneも可
+        :return: apiの返り値
         """
         url = self.base_url + api_path
         try:
@@ -261,36 +278,27 @@ class ToolRequestUtil:
                 else:
                     result = self.session.post(url=url, data=params, headers=self.headers).json()
             else:
-                print("request method error!")
+                print("リクエストメソッドエラー！")
                 return None
             return result
         except Exception as e:
-            print("http request error: %s" % e)
+            print("HTTPリクエストエラー: %s" % e)
             return None
 ```
-<!-- ## 👨‍💻‍ Contributors
-
-<a href="">
-  <img src="" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks). -->
-
-## 🛡 Disclaimer
-
-OS-Copilot is provided "as is" without warranty of any kind. Users assume full responsibility for any risks associated with its use, including **potential data loss** or **changes to system settings**. The developers of OS-Copilot are not liable for any damages or losses resulting from its use. Users must ensure their actions comply with applicable laws and regulations.
 
 
-## 🏫 Community
+## 免責事項
 
-Join our community to connect with other agent enthusiasts, share your tools and demos, and collaborate on exciting initiatives. You can find us on [Slack](https://join.slack.com/t/slack-ped8294/shared_invite/zt-2cqebow90-soac9UFKGZ2RcUy8PqjZrA).
+OS-Copilotは「現状のまま」提供され、いかなる種類の保証も伴いません。ユーザーは使用に伴うあらゆるリスク、**潜在的なデータ損失** や**システム設定の変更** を含む、全責任を負います。OS-Copilotの開発者は、その使用から生じるいかなる損害や損失に対しても責任を負いません。ユーザーは、行動が適用される法律および規制に準拠していることを確認する必要があります。
+## 🏫 コミュニティ
 
+エージェント愛好家とつながり、ツールやデモを共有し、エキサイティングなイニシアチブに協力するために、私たちのコミュニティに参加してください。[Slack](https://join.slack.com/t/slack-ped8294/shared_invite/zt-2cqebow90-soac9UFKGZ2RcUy8PqjZrA) で私たちを見つけることができます。
 
-## 🔎 Citation
+## 引用
 
-```
+```css
 @misc{wu2024oscopilot,
-      title={OS-Copilot: Towards Generalist Computer Agents with Self-Improvement}, 
+      title={OS-Copilot: 自己改善を伴う汎用コンピュータエージェントに向けて}, 
       author={Zhiyong Wu and Chengcheng Han and Zichen Ding and Zhenmin Weng and Zhoumianze Liu and Shunyu Yao and Tao Yu and Lingpeng Kong},
       year={2024},
       eprint={2402.07456},
@@ -300,6 +308,6 @@ Join our community to connect with other agent enthusiasts, share your tools and
 ```
 
 
-## 📬 Contact
+## 📬 連絡先
 
-If you have any inquiries, suggestions, or wish to contact us for any reason, we warmly invite you to email us at wuzhiyong@pjlab.org.cn.
+ご質問、提案、または何らかの理由で私たちに連絡したい場合は、[wuzhiyong@pjlab.org.cn]() までメールでお気軽にご連絡ください。
